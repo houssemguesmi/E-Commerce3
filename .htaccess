@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /E-Commerce/
+RewriteRule ^(.*)$ index.php [QSA,L]

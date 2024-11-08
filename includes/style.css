@@ -1,0 +1,21 @@
+#navbar-logo {
+  max-height: 50px;
+}
+#navbar-small-logo {
+  max-height: 70px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+.footer-container {
+  padding-left: 70px;
+  padding-right: 70px;
+  position: fixed;
+}
+#user-icon {
+  color:white !important;
+  font-size:35px !important;
+}
+.main {
+  background: red !important;
+}
