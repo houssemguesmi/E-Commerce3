@@ -1,4 +1,7 @@
-
+<?php
+$baseDir = __DIR__;
+$cssPath = 'includes/style.css';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,7 @@
         crossorigin="anonymous"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="<?php echo $cssPath; ?>"/>
 
 </head>
 <body>

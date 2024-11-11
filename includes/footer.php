@@ -11,14 +11,9 @@
                     <li class="nav-item mb-2">
                         <a href="#" class="nav-link p-0 text-muted">Our Products</a>
                     </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-muted">About Us</a>
-                    </li>
-                    <li class="nav-item mb-2">
-                        <a href="#" class="nav-link p-0 text-muted">Contact</a>
-                    </li>
                 </ul>
             </div>
+            <div class="col-4"></div>
             <div class="col-4 offset-1">
                 <form>
                     <h5>Subscribe to our newsletter</h5>
@@ -36,6 +31,7 @@
                     </div>
                 </form>
             </div>
+
         </div>
         <div class="d-flex justify-content-between py-4 my-4 border-top">
             <p>© 2024 Santa Needs, Inc. All rights reserved.</p>

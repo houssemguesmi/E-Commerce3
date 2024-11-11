@@ -10,12 +10,23 @@
 .footer-container {
   padding-left: 70px;
   padding-right: 70px;
-  position: fixed;
+  padding-top: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }
 #user-icon {
   color:white !important;
   font-size:35px !important;
 }
 .main {
-  background: red !important;
+  padding: 20px;
+  margin: 0 auto;
 }
+.navbar-container {
+}
+#login-container {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+}
+

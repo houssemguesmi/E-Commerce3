@@ -1,7 +1,7 @@
 <?php
 function run(string $url, array $routes): void
 {
-    $base_path = '/E-Commerce';
+    $base_path = '/E-Commerce3';
     if (strpos($url, $base_path) === 0) {
         $url = substr($url, strlen($base_path));
     }

@@ -1,4 +1,9 @@
-<div class="main">
+<?php
+$baseDir = __DIR__;
+$imagePath = 'includes/logo.png';
+$imagePath2 = 'includes/small-logo.png';
+?>
+<div class="navbar-container">
     <!-- Navbar -->
     <div
             class="collapse"
@@ -19,22 +24,22 @@
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="/E-Commerce/">
-                        <img id="navbar-logo" src="./logo.png"/>
+                    <a class="navbar-brand" href="/E-Commerce3/">
+                        <img id="navbar-logo" src="<?php echo $imagePath; ?>"/>
                     </a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/E-Commerce/"
+                                <a class="nav-link active" aria-current="page" href="/E-Commerce3/"
                                 >Home</a
                                 >
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/E-Commerce/products">Our products</a>
+                                <a class="nav-link" href="/E-Commerce3/products">Our products</a>
                             </li>
 
                         </ul>
-                        <a href="/E-Commerce/login">
+                        <a href="/E-Commerce3/login">
                             <i id="user-icon" class="bi bi-person-circle"></i>
                         </a>
                     </div>
@@ -58,9 +63,9 @@
             <a
                     class="navbar-brand"
                     style="margin-right: auto; margin-left: 50px"
-                    href="/E-Commerce"
+                    href="/E-Commerce3"
             >
-                <img id="navbar-small-logo" src="./small-logo.png"/>
+                <img id="navbar-small-logo" src="<?php echo $imagePath2; ?>"/>
             </a>
         </div>
     </nav>

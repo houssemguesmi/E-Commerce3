@@ -1,3 +1,6 @@
 RewriteEngine On
-RewriteBase /E-Commerce/
+RewriteBase /E-Commerce3/
+
+# Only exclude specific static files (images, CSS, JS) from redirection
+RewriteCond %{REQUEST_URI} !\.(png|jpg|jpeg|gif|css|js)$ [NC]
 RewriteRule ^(.*)$ index.php [QSA,L]
