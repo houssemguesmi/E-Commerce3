@@ -2,6 +2,12 @@
 $baseDir = __DIR__;
 $imagePath = 'includes/logo.png';
 $imagePath2 = 'includes/small-logo.png';
+
+if(!empty($_SESSION['user_image'])){
+    $user_image = $_SESSION['user_image'];
+}
+
+
 ?>
 <div class="navbar-container">
     <!-- Navbar -->
@@ -39,9 +45,25 @@ $imagePath2 = 'includes/small-logo.png';
                             </li>
 
                         </ul>
-                        <a href="/E-Commerce3/login">
-                            <i id="user-icon" class="bi bi-person-circle"></i>
-                        </a>
+                        <?php
+                        if (!empty($user_image)) {
+                            echo '<div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               <img id="user_profile_image" src="' . $user_image . '" alt="Profile Image">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>';
+                            include 'includes/logout.php';
+                            echo    '</li>
+                            </ul>
+                        </div>';
+                        } else {
+                            echo '<a href="/E-Commerce3/login"><i id="user-icon" class="bi bi-person-circle"></i></a>';
+                        }
+                        ?>
+
+
+
                     </div>
                 </div>
             </nav>

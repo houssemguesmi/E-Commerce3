@@ -1,14 +1,13 @@
 <?php
 $HOSTNAME="localhost";
 $USERNAME="root";
-$DATABASE="santa needs";
+$DATABASE="santaneeds";
 $PASSWORD="";
 
+global $con;
 $con=mysqli_connect($HOSTNAME,$USERNAME,$PASSWORD,$DATABASE);
 
-if($con) {
-    echo("Connection Successful!");
-} else {
+if(!$con) {
     echo("error");
     die(mysqli_error($con));
 };
