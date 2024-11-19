@@ -1,15 +1,14 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    include('connect.php');
-    global $con;
-    global $user;
-
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
+global $con;
+include('connect.php');
+$response = ['status' => 'error', 'message' => 'Invalid credentials.'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
+
         $query = "SELECT * FROM user WHERE email='$email' AND password='$password'";
         $result = mysqli_query($con, $query);
-
         if ($result && mysqli_num_rows($result) > 0) {
             $user = mysqli_fetch_assoc($result);
             $_SESSION['user_id'] = $user['id'];
@@ -18,18 +17,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_username'] = $user['username'];
             $_SESSION['user_role'] = $user['role'];
             $_SESSION['user_image'] = $user['image'];
-
-            header('Location: /E-Commerce3/');
-            exit();
-        } else {
-            echo "Invalid credentials.";
+            $response = ['status' => 'success', 'message' => 'Login successful.'];
+            echo json_encode($response);
+            exit;
         }
     }
-} else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+}else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if(!empty($_SESSION['user_id'])){
         header('Location: /E-Commerce3/');
     }
 }
+
 ?>
 
 <div id="login-container">
